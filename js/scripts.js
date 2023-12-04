@@ -20,6 +20,8 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 const myButton = document.getElementById('generate-ticket');
 
+    
+
 myButton.addEventListener('click', function() {
 
     //-nome passeggero
@@ -77,6 +79,10 @@ myButton.addEventListener('click', function() {
     }
     */
 
+    document.getElementById('class-ticket').innerHTML = 'Biglietto Standard' ;
+    document.getElementById('carriage').innerHTML = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    document.getElementById('code-number').innerHTML = Math.floor(Math.random() * 10000);
+
     switch (ageRange) {
         case "young":
             // Sconto del 20% per i minorenni
@@ -96,14 +102,14 @@ myButton.addEventListener('click', function() {
 
     document.getElementById('result').innerHTML=`${totalPrice}€`;
 
+    
     nameInput.value = '';
     kmInput.value = '';
-    ageInput.value = '';
+    ageRange.value = '';
 
-    document.getElementById('class-ticket').innerHTML = 'Biglietto Standard' ;
-    document.getElementById('carriage').innerHTML = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    document.getElementById('code-number').innerHTML = Math.floor(Math.random() * 10000);
-
+    
 });
+    
+
 
 
