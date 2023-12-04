@@ -22,24 +22,80 @@
         <!-- Inizio Main -->
         <main>
 
-            
-            <form>
-                <label for=nameInput">Inserisci il tuo nome</label>
-                <input type="text" id="nameInput" placeholder="Inserisci il tuo nome" required>
+            <div class="container-fluid bg-primary p-5">
 
-                <label for="kmInput">Inserisci i chilometri da percorrere</label>
-                <input type="number" id="kmInput" placeholder="Inserisci i chilometri che devi percorrere" required>
-
-                <label for="ageInput">Inserisci l'età del passeggero:</label>
-                <input type="number" id="ageInput" placeholder="Inserisci la tua età" required>
-
-                <div id="generate-ticket">
-                    <button type="button">Genera</button>
+                <div>
+                    <h1 class="text-center text-uppercase text-white p-5">
+                        Calcola il prezzo del tuo biglietto
+                    </h1>
                 </div>
-            
-            </form>
+                
+                <div class="text-white">
+                    <form>
+                        <div class="row gy-5 p-5 text-center">
 
-            <p id="result"></p>
+                            <div class="col-4 px-5">
+                                <label class="d-block w-100 fs-3" for="nameInput">Nome</label>
+                                <input class="d-block w-100 rounded-2 lh-lg" type="text" id="nameInput" placeholder="Inserisci il tuo nome" required>
+                            </div>
+
+                            <div class="col-4 px-5">
+                                <label class="d-block w-100 fs-3" for="kmInput">Km da percorrere</label>
+                                <input class="d-block w-100 rounded-2 lh-lg" type="number" id="kmInput" placeholder="Inserisci i chilometri che devi percorrere" required>
+                            </div>
+
+                            <div class="col-4 px-5">
+                                <label class="d-block w-100 fs-3" for="ageInput">Età</label>
+                                <input class="d-block w-100 rounded-2 lh-lg" type="number" id="ageInput" placeholder="Inserisci la tua età" required>
+                            </div>
+
+                            <div id="generate-ticket">
+                                <button class="p-2 rounded-2" type="button">Genera</button>
+                            </div>
+
+                        </div>
+                
+                    </form>
+                </div>
+
+                <div class="container">
+
+                    <h2 class="text-center text-uppercase text-white p-5">
+                        Il tuo biglietto
+                    </h2>
+
+                    <div class="row bg-white rounded-2 p-2">
+                        <div class="col-3 text-center text-uppercase p-3">
+                            <h4>nome passeggero</h3>
+                            <p id="passenger-name"></p>         
+                        </div>
+                        <div class="col-9 text-center">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Offerta</th>
+                                        <th scope="col">Carrozza</th>
+                                        <th scope="col">Codice CP</th>
+                                        <th scope="col">Costo Biglietto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" id="class-ticket" class="fw-normal"></th>
+                                        <td id="carriage"></td>
+                                        <td id="code-number"></td>
+                                        <td id="result"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            
 
            
         </main>
