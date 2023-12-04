@@ -20,12 +20,28 @@
     <body>
       
         <!-- Inizio Main -->
-        <main class="bg-secondary-subtle p-5">
+        <main>
 
-            <div class="bg-primary text-center text-white fs-1 rounded-5 p-5 m-5" id="ticket">
-                Il prezzo del tuo biglietto è:
-            </div>
             
+            <form>
+                <label for=nameInput">Inserisci il tuo nome</label>
+                <input type="text" id="nameInput" placeholder="Inserisci il tuo nome" required>
+
+                <label for="kmInput">Inserisci i chilometri da percorrere</label>
+                <input type="number" id="kmInput" placeholder="Inserisci i chilometri che devi percorrere" required>
+
+                <label for="ageInput">Inserisci l'età del passeggero:</label>
+                <input type="number" id="ageInput" placeholder="Inserisci la tua età" required>
+
+                <div id="generate-ticket">
+                    <button type="button">Genera</button>
+                </div>
+            
+            </form>
+
+            <p id="result"></p>
+
+           
         </main>
         <!-- Fine Main -->
            

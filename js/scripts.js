@@ -10,37 +10,62 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 */
 
-let kmToTravel = (prompt("Inserisci il numero di km da percorrere:"));
-console.log('Km da percorrere',kmToTravel, typeof kmToTravel);
-let kmToTravelNumber = parseInt(kmToTravel);
-console.log('Km da percorrere',kmToTravelNumber, typeof kmToTravelNumber);
+const myButton = document.getElementById('generate-ticket');
 
-let passengerAge = (prompt("Inserisci la tua età:"));
-console.log('Età',passengerAge, typeof passengerAge);
-let passengerAgeNumber = parseInt(passengerAge);
-console.log('Età',passengerAgeNumber, typeof passengerAgeNumber);
+myButton.addEventListener('click', function() {
 
-let kmPrice = 0.21;
-let totalPrice = kmToTravel * kmPrice;
+    const nameInput = document.getElementById('nameInput');
 
-if (!isNaN(passengerAge)) {
+    console.log('nameInput', nameInput, typeof nameInput);
+    console.log('nome passegero', nameInput.value, typeof nameInput.value);
 
-    if (passengerAge < 18) {
-    totalPrice = totalPrice * 0.8;
-    } 
+    //const kmInput = document.getElementById('kmInput');
+    //const kmToTravel = parseInt(kmInput.value);
 
-    else if (passengerAge >= 65) {
-    totalPrice = totalPrice * 0.6;
+    const kmToTravel = parseInt(document.getElementById("kmInput").value);
+
+    console.log('kmInput',kmInput , typeof kmInput);
+    console.log('km da percorrere', kmToTravel, typeof kmToTravel);
+
+    //const ageInput = document.getElementById('ageInput');
+    //const passengerAge = parseInt(ageInput.value);
+
+    const passengerAge = parseInt(document.getElementById("ageInput").value);
+
+    console.log('ageInput', ageInput, typeof ageInput);
+    console.log('Età del passeggero', passengerAge, typeof passengerAge);
+
+    
+
+    let kmPrice = 0.21;
+    let totalPrice = kmToTravel * kmPrice;
+
+    if (!isNaN(passengerAge)) {
+
+        if (passengerAge < 18) {
+        totalPrice = totalPrice * 0.8;
+        } 
+
+        else if (passengerAge >= 65) {
+        totalPrice = totalPrice * 0.6;
+        }
+
     }
 
-}
+    else {
+        alert('Inserisci i dati in numero!');
+    }
 
-else {
-    alert('Inserisci i dati in numero!');
-}
+    totalPrice = totalPrice.toFixed(2);
 
-totalPrice = totalPrice.toFixed(2);
+    console.log('Il prezzo del tuo biglietto è: ' + totalPrice + '€');
 
-console.log('Il prezzo del tuo biglietto è: ' + totalPrice + '€');
+    document.getElementById('result').innerHTML=`Il prezzo del tuo biglietto è: ${totalPrice}€`;
 
-document.getElementById('ticket').innerHTML=`Il prezzo del tuo biglietto è: ${totalPrice}€`;
+    nameInput.value = '';
+    kmInput.value = '';
+    ageInput.value = '';
+
+});
+
+
