@@ -22,26 +22,26 @@
         <!-- Inizio Main -->
         <main>
 
-            <div class="container-fluid bg-primary p-5">
+            <div class="container-fluid p-5">
 
-                <div>
-                    <h1 class="text-center text-uppercase text-white p-5">
+                
+                <div class="container text-danger bg-danger-subtle rounded-3">
+
+                    <h1 class="text-center text-uppercase text-danger p-5">
                         Calcola il prezzo del tuo biglietto
                     </h1>
-                </div>
-                
-                <div class="text-white">
+
                     <form>
                         <div class="row gy-5 p-5 text-center">
 
                             <div class="col-4 px-5">
                                 <label class="d-block w-100 fs-3" for="nameInput">Nome</label>
-                                <input class="d-block w-100 rounded-2 lh-lg" type="text" id="nameInput" placeholder="Inserisci il tuo nome" required>
+                                <input class="d-block w-100 rounded-2 lh-lg form-control border-danger" type="text" id="nameInput" placeholder="Inserisci il tuo nome" required>
                             </div>
 
                             <div class="col-4 px-5">
                                 <label class="d-block w-100 fs-3" for="kmInput">Km da percorrere</label>
-                                <input class="d-block w-100 rounded-2 lh-lg" type="number" id="kmInput" placeholder="Inserisci i chilometri che devi percorrere" required>
+                                <input class="d-block w-100 rounded-2 lh-lg form-control border-danger" type="number" id="kmInput" placeholder="Inserisci i km da percorrere" required>
                             </div>
 
                             <!--<div class="col-4 px-5">
@@ -50,7 +50,7 @@
                             </div>-->
                             <div class="form-group col-4 px-5">
                                 <label class="d-block w-100 fs-3" for="ageSelect">Fascia di età:</label>
-                                <select class="d-block w-100 rounded-2 lh-lg" id="ageSelect" required>
+                                <select class="d-block w-100 rounded-2 lh-lg border-danger" id="ageSelect" required>
                                     <option value="young">Minorenne</option>
                                     <option value="adult">Adulto</option>
                                     <option value="old">Anziano</option>
@@ -58,8 +58,8 @@
                             </div>
 
                             <div id="generate-ticket">
-                                <button class="p-2 rounded-2 mx-2" type="button">Genera</button>
-                                <button class="py-2 px-3 rounded-2 mx-2" type="reset">Reset</button>
+                                <button class="p-2 rounded-2 mx-2 btn btn-danger" type="button">Genera</button>
+                                <button class="py-2 px-3 rounded-2 mx-2 btn btn-danger" type="reset">Reset</button>
                             </div>
 
                         </div>
@@ -69,16 +69,16 @@
 
                 <div class="container">
 
-                    <h2 class="text-center text-uppercase text-white p-5">
-                        Il tuo biglietto
-                    </h2>
+                        <h2 class="text-center text-uppercase text-danger p-5">
+                            Il tuo biglietto
+                        </h2>
 
-                    <div class="row bg-secondary-subtle rounded-3 p-1">
-                        <div class="col-3 text-center text-uppercase p-3 bg-success-subtle">
-                            <h5>nome passeggero</h3>
-                            <p id="passenger-name"></p>         
+                    <div class="row bg-secondary-subtle rounded-3 p-1 ticket-layout">
+                        <div class="col-3 text-center text-uppercase py-4 bg-success-subtle">
+                            <h5 class="pt-1 mb-3">nome passeggero</h3>
+                            <p  id="passenger-name"></p>         
                         </div>
-                        <div class="col-9 text-center">
+                        <div class="col-9 text-center py-4">
                             <table class="table table-borderless table-secondary">
                                 <thead>
                                     <tr>
@@ -103,13 +103,13 @@
                 </div>
                 
             </div>
-
-            
-
-           
+        
         </main>
         <!-- Fine Main -->
-           
+
+        <!-- Javascript bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!-- Javascript -->
         <script src="./js/scripts.js" type="text/javascript"></script>
 

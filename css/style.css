@@ -17,5 +17,13 @@ html {
 }
 
 select {
-    height: 35px;
+    height: 45px;
+}
+
+.container-fluid {
+    background-image: url(../img/japanese-shinkansen-bullet-train_916912-258.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }

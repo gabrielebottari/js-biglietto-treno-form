@@ -20,8 +20,6 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 const myButton = document.getElementById('generate-ticket');
 
-    
-
 myButton.addEventListener('click', function() {
 
     //-nome passeggero
@@ -101,13 +99,11 @@ myButton.addEventListener('click', function() {
     document.getElementById('passenger-name').innerHTML= `${nameInput.value}`;
 
     document.getElementById('result').innerHTML=`${totalPrice}€`;
-
-    
+ 
     nameInput.value = '';
     kmInput.value = '';
     ageRange.value = '';
-
-    
+  
 });
     
 
