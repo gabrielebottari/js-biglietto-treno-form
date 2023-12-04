@@ -44,10 +44,12 @@ myButton.addEventListener('click', function() {
     //const ageInput = document.getElementById('ageInput');
     //const passengerAge = parseInt(ageInput.value);
 
-    const passengerAge = parseInt(document.getElementById("ageInput").value);
+    //const passengerAge = parseInt(document.getElementById("ageInput").value);
 
-    console.log('ageInput', ageInput, typeof ageInput);
-    console.log('Età del passeggero', passengerAge, typeof passengerAge);
+    //console.log('ageInput', ageInput, typeof ageInput);
+    //console.log('Età del passeggero', passengerAge, typeof passengerAge);
+
+    const ageRange = document.getElementById("ageSelect").value;
 
     
     //- il prezzo del biglietto è definito in base ai km (0.21 € al km)
@@ -57,6 +59,7 @@ myButton.addEventListener('click', function() {
     //- va applicato uno sconto del 20% per i minorenni
     //- va applicato uno sconto del 40% per gli over 65.
 
+    /*
     if (!isNaN(passengerAge)) {
 
         if (passengerAge < 18) {
@@ -71,6 +74,18 @@ myButton.addEventListener('click', function() {
 
     else {
         alert('Inserisci i dati in numero!');
+    }
+    */
+
+    switch (ageRange) {
+        case "young":
+            // Sconto del 20% per i minorenni
+            totalPrice *= 0.8;
+            break;
+        case "old":
+            // Sconto del 40% per gli over 65
+            totalPrice *= 0.6;
+            break;
     }
 
     totalPrice = totalPrice.toFixed(2);

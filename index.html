@@ -44,13 +44,22 @@
                                 <input class="d-block w-100 rounded-2 lh-lg" type="number" id="kmInput" placeholder="Inserisci i chilometri che devi percorrere" required>
                             </div>
 
-                            <div class="col-4 px-5">
+                            <!--<div class="col-4 px-5">
                                 <label class="d-block w-100 fs-3" for="ageInput">Età</label>
                                 <input class="d-block w-100 rounded-2 lh-lg" type="number" id="ageInput" placeholder="Inserisci la tua età" required>
+                            </div>-->
+                            <div class="form-group col-4 px-5">
+                                <label class="d-block w-100 fs-3" for="ageSelect">Fascia di età:</label>
+                                <select class="d-block w-100 rounded-2 lh-lg" id="ageSelect" required>
+                                    <option value="young">Minorenne</option>
+                                    <option value="adult">Adulto</option>
+                                    <option value="old">Anziano</option>
+                                </select>
                             </div>
 
                             <div id="generate-ticket">
-                                <button class="p-2 rounded-2" type="button">Genera</button>
+                                <button class="p-2 rounded-2 mx-2" type="button">Genera</button>
+                                <button class="py-2 px-3 rounded-2 mx-2" type="reset">Reset</button>
                             </div>
 
                         </div>
